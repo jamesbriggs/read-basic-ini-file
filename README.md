@@ -6,7 +6,7 @@ Professional-level sample source code in various programming languages for readi
 
 * Perl5 - read_basic_ini_file.pl
 * Python 2.5+ and 3 - read_basic_ini_file.py
-* Bash - read_basic_ini_file.sh
+* Bash4 - read_basic_ini_file.sh
 
 **Usage**
 

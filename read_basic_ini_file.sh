@@ -2,7 +2,7 @@
 
 # Program: read_basic_ini_file.sh
 # Purpose: Basic Windows-style .ini file parser (without sections) sample
-# Env: bash
+# Env: bash4
 # Author: Jmaes Briggs, 2019
 # Licence: MIT
 # Date: 2019 08 05
@@ -22,16 +22,26 @@ trim() {
 }
 
 read_basic_ini_file() {
+   debug=0
    pattern="^[#\[]"
+
    while IFS="=" read -ra line; do
        key=$(trim "${line[0]}")
        value=$(trim "${line[1]}")
        if [[ "$key" != "" && ! "$key" =~ $pattern ]]; then
-          echo "$key, $value"
+          if [[ "$debug" -eq 1 ]]; then
+             echo "$key, $value"
+          fi
+          hash["$key"]="$value"
        fi
    done < "$1"
 }
 
+declare -A hash
 read_basic_ini_file "animals.txt"
+
+for i in "${!hash[@]}"; do
+   echo "$i, ${hash[$i]}"
+done
 
 set -e
