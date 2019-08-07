@@ -4,8 +4,9 @@
 
 Professional-level sample source code in various programming languages for reading text files with error handling, using a basic .ini text format as an example.
 
-*  Perl5 - read_basic_ini_file.pl
-*  Python 2.5+ and 3 - read_basic_ini_file.py
+* Perl5 - read_basic_ini_file.pl
+* Python 2.5+ and 3 - read_basic_ini_file.py
+* Bash - read_basic_ini_file.sh
 
 **Usage**
 
