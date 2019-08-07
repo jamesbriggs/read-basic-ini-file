@@ -1,4 +1,4 @@
-# read_basic_ini_file
+# read-basic-ini-file
 
 **Description**
 
@@ -16,6 +16,7 @@ Professional-level sample source code in various programming languages for readi
 **FAQ**
 
 Q: Why?
+
 A: It's not as simple as you might think to write reliable, portable code for file processing, especially in an unfamiliar programming language. As complete sample programs, these are more useful than typical online programming answers.
 
 **Copyright**
