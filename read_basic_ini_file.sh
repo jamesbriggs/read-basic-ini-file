@@ -25,9 +25,10 @@ read_basic_ini_file() {
    debug=0
    pattern="^[#\[]"
 
-   while IFS="=" read -ra line; do
-       key=$(trim "${line[0]}")
-       value=$(trim "${line[1]}")
+   local IFS="="
+   while read -r key value; do
+       key=$(trim "$key")
+       value=$(trim "$value")
        if [[ "$key" != "" && ! "$key" =~ $pattern ]]; then
           if [[ "$debug" -eq 1 ]]; then
              echo "$key, $value"
