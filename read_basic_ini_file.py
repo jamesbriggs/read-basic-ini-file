@@ -15,7 +15,7 @@ def read_basic_ini_file(filepath):
    d = {} # dict (hash)
    debug = 0
    with open(filepath, 'r') as f:
-       # for cnt, line in enumerate(f): ### python v3 only
+       # for cnt, line in enumerate(f): ### Python 3 only
        for line in f:
            if debug:
               print(line)
@@ -24,10 +24,14 @@ def read_basic_ini_file(filepath):
               line[0] == '#' or \
               re.search('^\[.*\]$', line):
               continue
-           # key, value, *rest = line.split('=') # Python 3
-           split_list = line.split('=')
-           key = split_list.pop(0)
-           value = '='.join(split_list)
+
+           # key, value, *rest = line.split('=') ### Python 3 only
+
+           ### the Python 2 way to avoid runtime errors on malformed input:
+           tokens = line.split('=')
+           key = tokens.pop(0)
+           value = '='.join(tokens)
+
            if debug:
               print(key, value)
            d[key.strip()] = value.strip()
