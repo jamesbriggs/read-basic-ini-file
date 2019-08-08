@@ -24,6 +24,7 @@ use Data::Dumper;
    # Do not use each:
    # http://blogs.perl.org/users/rurban/2014/04/do-not-use-each.html
    for my $k (sort keys %{$h}) {
+no warnings 'uninitialized';
       print "$k=$h->{$k}\n"; # use arrow notation to dereference hashref
    }
 

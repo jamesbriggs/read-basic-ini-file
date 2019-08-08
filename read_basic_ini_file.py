@@ -24,7 +24,10 @@ def read_basic_ini_file(filepath):
               line[0] == '#' or \
               re.search('^\[.*\]$', line):
               continue
-           key, value = line.split('=', 2)
+           # key, value, *rest = line.split('=') # Python 3
+           split_list = line.split('=')
+           key = split_list.pop(0)
+           value = '='.join(split_list)
            if debug:
               print(key, value)
            d[key.strip()] = value.strip()
