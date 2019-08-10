@@ -8,7 +8,7 @@
 # Note: non-trivial example of file handling and parsing for you to customize
 
 def read_basic_ini_file(filepath)
-   h = Hash.new
+   h = {}
    f = File.open(filepath, "r")
    f.each_line do |line|
       line = line.chomp
