@@ -2,7 +2,7 @@
 #
 # Purpose: Basic Windows-style .ini file parser (without sections) sample
 # Env: Ruby
-# Author: Jmaes Briggs, 2019
+# Author: James Briggs, 2019
 # Licence: MIT
 # Date: 2019 08 05
 # Note: non-trivial example of file handling and parsing for you to customize
