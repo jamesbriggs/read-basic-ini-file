@@ -24,7 +24,7 @@ use Data::Dumper;
    # Do not use each:
    # http://blogs.perl.org/users/rurban/2014/04/do-not-use-each.html
    for my $k (sort keys %{$h}) {
-no warnings 'uninitialized';
+      no warnings 'uninitialized';
       print "$k=$h->{$k}\n"; # use arrow notation to dereference hashref
    }
 
@@ -41,7 +41,7 @@ sub read_basic_ini_file {
 
       next if /^$/ or      # skip blank line
               /^#/ or      # skip line starting with a comment character
-              /^\[.*\]$/;  # skip section name like [section]
+              /^\[[^\]]*\]$/;  # skip section name like [section]
 
       my ($key, $value) = split(/=/, $_, 2);
 

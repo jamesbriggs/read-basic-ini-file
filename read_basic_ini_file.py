@@ -22,7 +22,7 @@ def read_basic_ini_file(filepath):
            line = line.rstrip('\r\n')
            if not len(line) or \
               line[0] == '#' or \
-              re.search('^\[.*\]$', line):
+              re.search('^\[[^\]]*\]$', line):
               continue
 
            # key, value, *rest = line.split('=') ### Python 3 only
