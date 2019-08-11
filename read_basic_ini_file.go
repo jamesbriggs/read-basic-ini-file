@@ -69,5 +69,5 @@ func read_basic_ini_file(filepath string) map[string]string {
       log.Fatal(err)
    }
 
-   return h;
+   return h
 }
