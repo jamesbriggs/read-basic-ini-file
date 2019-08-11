@@ -1,6 +1,6 @@
 // Program: read_basic_ini_file.go
 // Purpose: Basic Windows-style .ini file parser (without sections) sample
-// Env: Perl5
+// Env: Go
 // Author: James Briggs, 2019
 // Licence: MIT
 // Date: 2019 08 05
