@@ -18,7 +18,7 @@ import (
 )
 
 func main() {
-   h := xxx("animals.txt")
+   h := read_basic_ini_file("animals.txt")
 
    for key, value := range h {
        fmt.Println(key, ": ", value)
@@ -29,7 +29,7 @@ func isset(arr []string, index int) bool {
     return (len(arr) > index)
 }
 
-func xxx(filepath string) map[string]string {
+func read_basic_ini_file(filepath string) map[string]string {
    var debug bool = false
 
    file, err := os.Open(filepath)
