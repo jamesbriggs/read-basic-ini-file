@@ -25,10 +25,6 @@ func main() {
    }
 }
 
-func isset(arr []string, index int) bool {
-    return (len(arr) > index)
-}
-
 func read_basic_ini_file(filepath string) map[string]string {
    var debug bool = false
 
@@ -38,7 +34,7 @@ func read_basic_ini_file(filepath string) map[string]string {
    }
    defer file.Close()
 
-   h := make(map[string]string);
+   h := make(map[string]string)
 
    r, _ := regexp.Compile("^\\[[^\\]]*\\]$")
 
@@ -66,7 +62,7 @@ func read_basic_ini_file(filepath string) map[string]string {
              value += "=" + x
           }
        }
-       h[strings.TrimSpace(key)] = strings.TrimSpace(value);
+       h[strings.TrimSpace(key)] = strings.TrimSpace(value)
    }
 
    if err := scanner.Err(); err != nil {
