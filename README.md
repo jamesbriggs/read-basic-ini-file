@@ -2,7 +2,7 @@
 
 **Description**
 
-Professional-level sample source code in various programming languages for reading text files with error handling, using a basic .ini text format as an example.
+Professional-level sample source code in various programming languages for reading text files with error handling, using a basic [.ini file format](https://en.wikipedia.org/wiki/INI_file) as an example.
 
 * Go - read_basic_ini_file.go
 * Perl5 - read_basic_ini_file.pl
