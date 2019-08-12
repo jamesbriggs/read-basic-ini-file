@@ -27,5 +27,5 @@ end
 
 h = read_basic_ini_file("config.ini")
 
-h.each {|key, value| puts "#{key}, #{value}" }
+h.keys.sort.each {|key| puts "#{key}=#{h[key]}" }
 

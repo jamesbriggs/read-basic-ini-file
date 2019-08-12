@@ -1,3 +1,5 @@
+#!/usr/bin/env php
+
 <?php
 // Program: read_basic_ini_file.php
 // Purpose: Basic Windows-style .ini file parser (without sections) sample

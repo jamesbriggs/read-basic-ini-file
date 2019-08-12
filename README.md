@@ -2,7 +2,7 @@
 
 **Description**
 
-Professional-level sample source code in various programming languages for reading text files with error handling, using a basic [.ini file format](https://en.wikipedia.org/wiki/INI_file) as an example.
+Professional-level sample source code in various programming languages for reading text files with error handling, using basic [.ini file format](https://en.wikipedia.org/wiki/INI_file) parsing as an example.
 
 * Go - read_basic_ini_file.go
 * Perl5 - read_basic_ini_file.pl
@@ -11,9 +11,11 @@ Professional-level sample source code in various programming languages for readi
 * Ruby - read_basic_ini_file.rb
 * Bash4 - read_basic_ini_file.sh
 
+Each file is a complete program that reads config.ini, parses it and displays the key-values.
+
 **Usage**
 
-1. Pick your preferred sample file according to language
+1. Pick your preferred sample source code file according to programming language
 2. Run it to see it in action
 3. Then copy and paste the source code and customize for your purpose.
 

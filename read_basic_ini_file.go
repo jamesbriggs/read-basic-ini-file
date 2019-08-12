@@ -1,3 +1,5 @@
+//usr/bin/go run $0 $@; exit $?
+
 // Program: read_basic_ini_file.go
 // Purpose: Basic Windows-style .ini file parser (without sections) sample
 // Env: Go
@@ -21,7 +23,7 @@ func main() {
    h := read_basic_ini_file("config.ini")
 
    for key, value := range h {
-       fmt.Println(key, "=", value)
+       fmt.Println(key+"="+value)
    }
 }
 
