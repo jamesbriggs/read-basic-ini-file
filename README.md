@@ -44,7 +44,7 @@ The simple parsing rules from input lines to key-value pairs are:
 [section]
 camel=2
 dog=4
-cat=3
+ cat=3
 ant = 1000
 llama = 2 = a
 aardvark
