@@ -38,8 +38,7 @@ def read_basic_ini_file(filepath):
    return d
 
 def main():
-   filepath = 'config.ini'
-   h = read_basic_ini_file(filepath)
+   h = read_basic_ini_file('config.ini')
    for key, value in sorted(h.items()):
        print(key, value)
 

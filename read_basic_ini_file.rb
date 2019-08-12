@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
-#
+
 # Purpose: Basic Windows-style .ini file parser (without sections) sample
 # Env: Ruby
 # Author: James Briggs, 2019
