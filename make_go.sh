@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Program: make_go.sh
-# Purpose: build go_client_sample.go
+# Purpose: build read_basic_ini_file.go
 # Copyright: James Briggs USA 2019
 # Env: bash
 # Returns: exit status is non-zero on failure
