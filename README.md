@@ -31,11 +31,14 @@ The simple parsing rules from input lines to key-value pairs are:
 * multi-line settings are not recognized
 * substitutions are not performed
 * key and value strings are trimmed on left-hand and right-hand sides
+* missing value default is empty string
+* missing newline at EOF should not matter
 * return a hash (aka dict or associative array) or hash handle of key-value pairs if possible
 
-**Sample config.ini**
+**Sample config.ini provided for testing**
 
 ```
+<blank line>
 ; comment
 # comment
 [section]
