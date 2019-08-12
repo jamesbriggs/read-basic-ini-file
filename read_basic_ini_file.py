@@ -21,7 +21,7 @@ def read_basic_ini_file(filepath):
               print(line)
            line = line.rstrip('\r\n')
            if not len(line) or \
-              line[0] == '#' or \
+              re.search('^;|#', line) or \
               re.search('^\[[^\]]*\]$', line):
               continue
 
@@ -38,7 +38,7 @@ def read_basic_ini_file(filepath):
    return d
 
 def main():
-   filepath = 'animals.txt'
+   filepath = 'config.ini'
    h = read_basic_ini_file(filepath)
    for key, value in h.items():
        print(key, value)

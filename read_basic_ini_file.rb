@@ -13,7 +13,7 @@ def read_basic_ini_file(filepath)
    f.each_line do |line|
       line = line.chomp
       if line =~ /^$/ or
-         line =~ /^#/ or
+         line =~ /^;|#/ or
          line =~ /^\[[^\]]*\]$/
          next
       end
@@ -25,7 +25,7 @@ def read_basic_ini_file(filepath)
    return h
 end
 
-h = read_basic_ini_file("animals.txt")
+h = read_basic_ini_file("config.ini")
 
 h.each {|key, value| puts "#{key}, #{value}" }
 

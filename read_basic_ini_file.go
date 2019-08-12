@@ -18,7 +18,7 @@ import (
 )
 
 func main() {
-   h := read_basic_ini_file("animals.txt")
+   h := read_basic_ini_file("config.ini")
 
    for key, value := range h {
        fmt.Println(key, ": ", value)

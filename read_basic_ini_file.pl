@@ -16,7 +16,7 @@ use Data::Dumper;
 
    my $DEBUG = 0;
 
-   my $filepath = "animals.txt";
+   my $filepath = "config.ini";
    my $h = read_basic_ini_file($filepath);
 
    print Dumper($h) if $DEBUG; # show nested hash data structure
@@ -40,7 +40,7 @@ sub read_basic_ini_file {
       chomp;               # remove trailing newline for this OS
 
       next if /^$/ or      # skip blank line
-              /^#/ or      # skip line starting with a comment character
+              /^;|#/ or      # skip line starting with a comment character
               /^\[[^\]]*\]$/;  # skip section name like [section]
 
       my ($key, $value) = split(/=/, $_, 2);

@@ -14,7 +14,7 @@ function read_basic_ini_file($filepath) {
    while(!feof($f)) {
       $line = trim(fgets($f));
       if (!strlen($line) or
-         preg_match("/^#/", $line) or
+         preg_match("/^;|#/", $line) or
          preg_match("/^\[[^\]]*\]$/", $line)) {
          continue;
       }
@@ -26,7 +26,7 @@ function read_basic_ini_file($filepath) {
    return $h;
 }
 
-$h = read_basic_ini_file("animals.txt");
+$h = read_basic_ini_file("config.ini");
 
 foreach ($h as $key => $value) {
    echo "$key=$value\n";

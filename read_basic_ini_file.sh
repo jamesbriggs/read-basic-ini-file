@@ -23,7 +23,7 @@ trim() {
 
 read_basic_ini_file() {
    debug=0
-   pattern="^[#\[]"
+   pattern="^[;#\[]"
 
    local IFS="="
    while read -r key value; do
@@ -39,7 +39,7 @@ read_basic_ini_file() {
 }
 
 declare -A hash
-read_basic_ini_file "animals.txt"
+read_basic_ini_file "config.ini"
 
 for i in "${!hash[@]}"; do
    echo "$i, ${hash[$i]}"
