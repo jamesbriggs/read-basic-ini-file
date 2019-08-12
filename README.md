@@ -13,15 +13,42 @@ Professional-level sample source code in various programming languages for readi
 
 **Usage**
 
-* Pick your preferred sample file according to language
-* Run it to see it in action
-* Then copy and paste the source code and customize for your purpose.
+1. Pick your preferred sample file according to language
+2. Run it to see it in action
+3. Then copy and paste the source code and customize for your purpose.
+
+**config.ini**
+
+```
+; comment
+# comment
+[section]
+camel=2
+dog=4
+cat=3
+ant = 1000
+llama = 2 = a
+aardvark
+```
+
+**Example**
+
+```
+$ ./read_basic_ini_file.pl
+
+aardvark=
+ant=1000
+camel=2
+cat=3
+dog=4
+llama=2 = a
+```
 
 **FAQ**
 
 Q: Why?
 
-A: It's not as simple as you might think to write reliable, portable code for file processing, especially in an unfamiliar programming language. As complete sample programs, these are more useful than typical online programming answers.
+A: It's not as simple as you might think to write reliable, portable code for file processing, especially in an unfamiliar programming language. As complete, tested sample programs, these are more useful than typical online programming answers.
 
 **Copyright**
 
