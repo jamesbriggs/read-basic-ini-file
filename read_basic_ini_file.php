@@ -1,5 +1,4 @@
 #!/usr/bin/env php
-
 <?php
 // Program: read_basic_ini_file.php
 // Purpose: Basic Windows-style .ini file parser (without sections) sample
@@ -10,7 +9,7 @@
 // Note: non-trivial example of file handling and parsing for you to customize
 
 function read_basic_ini_file($filepath) {
-   $h = array();
+   $h = Array();
    $f = fopen($filepath, "r") or die("error: unable to open file!");
 
    while(!feof($f)) {
@@ -30,6 +29,7 @@ function read_basic_ini_file($filepath) {
 
 $h = read_basic_ini_file("config.ini");
 
+ksort($h);
 foreach ($h as $key => $value) {
    echo "$key=$value\n";
 }

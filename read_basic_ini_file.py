@@ -40,7 +40,7 @@ def read_basic_ini_file(filepath):
 def main():
    filepath = 'config.ini'
    h = read_basic_ini_file(filepath)
-   for key, value in h.items():
+   for key, value in sorted(h.items()):
        print(key, value)
 
 if __name__ == "__main__":
