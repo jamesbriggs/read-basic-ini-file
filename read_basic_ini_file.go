@@ -21,7 +21,7 @@ func main() {
    h := read_basic_ini_file("config.ini")
 
    for key, value := range h {
-       fmt.Println(key, ": ", value)
+       fmt.Println(key, "=", value)
    }
 }
 
@@ -36,15 +36,16 @@ func read_basic_ini_file(filepath string) map[string]string {
 
    h := make(map[string]string)
 
-   r, _ := regexp.Compile("^\\[[^\\]]*\\]$")
+   rc, _ := regexp.Compile("^;|#")
+   rs, _ := regexp.Compile("^\\[[^\\]]*\\]$")
 
    scanner := bufio.NewScanner(file)
    var line string
    for scanner.Scan() {
        line = scanner.Text()
        if len(line) == 0 ||
-          line[0] == '#' ||
-          r.MatchString(line) {
+          rc.MatchString(line) ||
+          rs.MatchString(line) {
           continue
        }
        if debug {
