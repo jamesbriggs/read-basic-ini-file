@@ -17,7 +17,23 @@ Professional-level sample source code in various programming languages for readi
 2. Run it to see it in action
 3. Then copy and paste the source code and customize for your purpose.
 
-**config.ini**
+**Demo .ini Parsing Rules**
+
+Although simple .ini parsing is done for demonstration purposes, you
+should use an official .ini parsing module if required.
+
+The simple parsing rules from input lines to key-value pairs are:
+
+* empty lines are skipped
+* lines starting with comments (; or #) are skipped
+* [section] lines are skipped
+* values containing extra = signs are allowed
+* multi-line settings are not recognized
+* substitutions are not performed
+* key and value strings are trimmed on left-hand and right-hand sides
+* return a hash (aka dict or associative array) or hash handle of key-value pairs if possible
+
+**Sample config.ini**
 
 ```
 ; comment
